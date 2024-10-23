@@ -15,7 +15,6 @@ public class SortingThreeNumbers {
         System.out.print("Enter the third number: ");
         int num3 = scanner.nextInt();
 
-        // Sort the numbers in ascending order
         if (num1 > num2) {
             int temp = num1;
             num1 = num2;
@@ -32,10 +31,8 @@ public class SortingThreeNumbers {
             num3 = temp;
         }
 
-        // Print the sorted numbers in ascending order
         System.out.println("The numbers in ascending order are: " + num1 + " " + num2 + " " + num3);
 
-        // Sort the numbers in descending order
         if (num1 < num2) {
             int temp = num1;
             num1 = num2;
@@ -52,7 +49,6 @@ public class SortingThreeNumbers {
             num3 = temp;
         }
 
-        // Print the sorted numbers in descending order
         System.out.println("The numbers in descending order are: " + num1 + " " + num2 + " " + num3);
 
     }
