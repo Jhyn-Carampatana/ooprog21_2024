@@ -21,14 +21,13 @@ public class SpoonerismGenerator {
     }
 
     public static boolean isValidWord(String word) {
-        // Check if the word has at least one vowel and doesn't start with a vowel
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
             if (isVowel(ch)) {
-                return i != 0; // True if it has a vowel and doesn't start with one
+                return i != 0; 
             }
         }
-        return false; // No vowel found
+        return false; // 
     }
 
     public static boolean isVowel(char ch) {
@@ -37,18 +36,16 @@ public class SpoonerismGenerator {
     }
 
     public static String swapFirstConsonants(String word1, String word2) {
-        // Find the first vowel in each word
         int vowelIndex1 = findFirstVowel(word1);
         int vowelIndex2 = findFirstVowel(word2);
 
-        // If both words have vowels, swap the first consonants
         if (vowelIndex1 != -1 && vowelIndex2 != -1) {
             return word1.substring(0, 1).replace(word1.charAt(0), word2.charAt(0)) +
                    word1.substring(1, vowelIndex1) +
                    word2.charAt(vowelIndex2) +
                    word1.substring(vowelIndex1 + 1);
         } else {
-            return word1; // Return the original word if no swap is possible
+            return word1; 
         }
     }
 
@@ -58,6 +55,6 @@ public class SpoonerismGenerator {
                 return i;
             }
         }
-        return -1; // No vowel found
+        return -1;
     }
 }
